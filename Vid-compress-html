@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Compress your videos online with our responsive video compression tool. Optimize your videos for faster sharing and better performance.">
+    <meta name="keywords" content="video compression, compress video, online video tool, video optimizer">
+    <meta name="author" content="Your Name">
+    <title>Responsive Video Compression Tool</title>
+    <style>
+        /* General Styles */
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(135deg, #f5f7fa, #c3cfe2);
+            color: #333;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .container {
+            max-width: 1200px;
+            width: 90%;
+            margin: 20px auto;
+            padding: 20px;
+            background: #fff;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            text-align: center;
+            color: #2c3e50;
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            font-weight: 600;
+        }
+
+        h2 {
+            color: #34495e;
+            font-size: 1.8rem;
+            margin-bottom: 15px;
+            font-weight: 500;
+        }
+
+        /* Upload Section */
+        .upload-section {
+            background: #ffffff;
+            padding: 25px;
+            margin-bottom: 25px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        .upload-section input[type="file"] {
+            display: none;
+        }
+
+        .upload-section label {
+            display: inline-block;
+            background-color: #3498db;
+            color: white;
+            padding: 12px 24px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+        }
+
+        .upload-section label:hover {
+            background-color: #2980b9;
+            transform: translateY(-2px);
+        }
+
+        /* Compression Section */
+        .compression-section {
+            background: #ffffff;
+            padding: 25px;
+            margin-bottom: 25px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        .compression-section select {
+            width: 100%;
+            padding: 12px;
+            margin: 10px 0;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 1rem;
+            background-color: #f9f9f9;
+            transition: border-color 0.3s ease;
+        }
+
+        .compression-section select:focus {
+            border-color: #3498db;
+            outline: none;
+        }
+
+        .compression-section button {
+            width: 100%;
+            padding: 12px;
+            background-color: #27ae60;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+        }
+
+        .compression-section button:hover {
+            background-color: #219150;
+            transform: translateY(-2px);
+        }
+
+        /* Video Preview Section */
+        .video-preview {
+            background: #ffffff;
+            padding: 25px;
+            margin-bottom: 25px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        .video-preview video {
+            max-width: 100%;
+            height: auto;
+            border-radius: 5px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Download Section */
+        .download-section {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .download-section button {
+            background-color: #e67e22;
+            color: white;
+            padding: 12px 24px;
+            border: none;
+            border-radius: 5px;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+        }
+
+        .download-section button:hover {
+            background-color: #d35400;
+            transform: translateY(-2px);
+        }
+
+        /* Timer Section */
+        .timer-section {
+            text-align: center;
+            margin-top: 10px;
+            font-size: 1.2rem;
+            color: #34495e;
+        }
+
+        /* Ad Section */
+        .ad-section {
+            background: #ffffff;
+            padding: 25px;
+            margin-bottom: 25px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        .ad-section h2 {
+            color: #34495e;
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2rem;
+            }
+
+            h2 {
+                font-size: 1.5rem;
+            }
+
+            .container {
+                padding: 15px;
+            }
+
+            .upload-section, .compression-section, .video-preview, .ad-section {
+                padding: 20px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 1.8rem;
+            }
+
+            h2 {
+                font-size: 1.3rem;
+            }
+
+            .upload-section label, .compression-section button {
+                padding: 10px 20px;
+                font-size: 0.9rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Responsive Video Compression Tool</h1>
+        
+        <!-- Ad Section -->
+        <div class="ad-section">
+            <h2>Advertisement</h2>
+            <!-- AdSense Script -->
+            <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1556290617292171"
+            crossorigin="anonymous"></script>
+            <!-- Ad Unit -->
+            <ins class="adsbygoogle"
+                style="display:block"
+                data-ad-client="ca-pub-1556290617292171"
+                data-ad-slot="1234567890"
+                data-ad-format="auto"
+                data-full-width-responsive="true"></ins>
+            <script>
+                (adsbygoogle = window.adsbygoogle || []).push({});
+            </script>
+        </div>
+
+        <!-- Upload Section -->
+        <div class="upload-section">
+            <h2>Upload Your Video</h2>
+            <label for="videoUpload">Choose Video File</label>
+            <input type="file" id="videoUpload" accept="video/*">
+        </div>
+
+        <!-- Compression Section -->
+        <div class="compression-section">
+            <h2>Select Compression Level</h2>
+            <select id="compressionLevel">
+                <option value="480">480p (High Compression)</option>
+                <option value="720">720p (Medium Compression)</option>
+                <option value="1080">1080p (Low Compression)</option>
+            </select>
+            <button id="compressBtn">Compress Video</button>
+        </div>
+
+        <!-- Timer Section -->
+        <div class="timer-section">
+            <p id="timer">Compression Time: 0s</p>
+        </div>
+
+        <!-- Video Preview Section -->
+        <div class="video-preview">
+            <h2>Compressed Video Preview</h2>
+            <video id="compressedVideo" controls></video>
+        </div>
+
+        <!-- Download Section -->
+        <div class="download-section">
+            <button id="downloadBtn" disabled>Download Compressed Video</button>
+        </div>
+    </div>
+
+    <!-- Include FFmpeg.js -->
+    <script src="https://unpkg.com/@ffmpeg/ffmpeg@0.11.0/dist/ffmpeg.min.js"></script>
+    <script>
+        const { createFFmpeg, fetchFile } = FFmpeg;
+        let ffmpeg = null;
+        let startTime = null;
+
+        const initializeFFmpeg = async () => {
+            if (!ffmpeg) {
+                ffmpeg = createFFmpeg({ log: true });
+                await ffmpeg.load();
+            }
+        };
+
+        const compressVideo = async (file, compressionLevel) => {
+            try {
+                // Reset FFmpeg instance for a new compression task
+                if (ffmpeg) {
+                    ffmpeg.exit();
+                }
+                ffmpeg = createFFmpeg({ log: true });
+                await ffmpeg.load();
+
+                // Write the file to FFmpeg's file system
+                ffmpeg.FS('writeFile', 'input.mp4', await fetchFile(file));
+
+                // Start the timer
+                startTime = Date.now();
+                updateTimer();
+
+                // Compress the video based on the selected resolution
+                await ffmpeg.run(
+                    '-i', 'input.mp4',
+                    '-vf', `scale=-2:${compressionLevel}`,
+                    '-b:v', '1M', // Adjust bitrate for better compression
+                    'output.mp4'
+                );
+
+                // Stop the timer
+                const endTime = Date.now();
+                const compressionTime = ((endTime - startTime) / 1000).toFixed(2);
+                document.getElementById('timer').textContent = `Compression Time: ${compressionTime}s`;
+
+                // Read the compressed video
+                const data = ffmpeg.FS('readFile', 'output.mp4');
+
+                // Create a URL for the compressed video
+                return URL.createObjectURL(new Blob([data.buffer], { type: 'video/mp4' }));
+            } catch (error) {
+                console.error('Error compressing video:', error);
+                throw error;
+            }
+        };
+
+        const updateTimer = () => {
+            if (startTime) {
+                const currentTime = Date.now();
+                const elapsedTime = ((currentTime - startTime) / 1000).toFixed(2);
+                document.getElementById('timer').textContent = `Compression Time: ${elapsedTime}s`;
+                requestAnimationFrame(updateTimer);
+            }
+        };
+
+        document.getElementById('compressBtn').addEventListener('click', async () => {
+            const file = document.getElementById('videoUpload').files[0];
+            const compressionLevel = document.getElementById('compressionLevel').value;
+
+            if (!file) {
+                alert('Please upload a video file first.');
+                return;
+            }
+
+            // Disable buttons during processing
+            document.getElementById('compressBtn').disabled = true;
+            document.getElementById('downloadBtn').disabled = true;
+
+            try {
+                const url = await compressVideo(file, compressionLevel);
+
+                // Display the compressed video
+                const video = document.getElementById('compressedVideo');
+                video.src = url;
+                video.controls = true;
+
+                // Enable the download button
+                const downloadBtn = document.getElementById('downloadBtn');
+                downloadBtn.disabled = false;
+                downloadBtn.onclick = () => {
+                    const a = document.createElement('a');
+                    a.href = url;
+                    a.download = `compressed-video-${compressionLevel}p.mp4`;
+                    document.body.appendChild(a);
+                    a.click();
+                    document.body.removeChild(a);
+                };
+            } catch (error) {
+                alert('Failed to compress the video. Please try again.');
+            } finally {
+                // Re-enable the compress button
+                document.getElementById('compressBtn').disabled = false;
+            }
+        });
+    </script>
+</body>
+</html>
